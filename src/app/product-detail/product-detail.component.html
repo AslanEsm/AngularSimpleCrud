@@ -1,0 +1,30 @@
+<div class="row mt-5">
+
+    <mat-card class="col-md-4 m-auto">
+        <mat-card-header>
+            <div mat-card-avatar class="example-header-image"></div>
+            <mat-card-title>{{product.name}}</mat-card-title>
+        </mat-card-header>
+        <img mat-card-image src="{{Url}}" alt="{{product.name}}">
+        <mat-card-content>
+            <p>
+                Short Description : {{product.shortDes}}
+
+            </p>
+            <p>
+                Description : {{product.description}}
+            </p>
+            <p>
+                Inventory : {{product.count}}
+            </p>
+        </mat-card-content>
+        <mat-card-actions>
+            <div class="col-md-12">
+                <button mat-raised-button color="primary" class="w-25 float-right" type="submit" (click)="EditProduct()">Edit Product</button>
+                <button mat-raised-button class="w-25 danger float-right" type="submit" (click)="DeleteProduct()">ِDelete Product</button>
+            </div>
+        </mat-card-actions>
+    </mat-card>
+
+
+</div>

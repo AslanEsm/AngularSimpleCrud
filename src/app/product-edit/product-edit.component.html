@@ -1,0 +1,45 @@
+<div class="row mt-5">
+    <mat-card class="col-md-4 m-auto">
+        <form [formGroup]="form">
+            <div class="mb-2">
+                <img class="w-100 custom-style img-thumbnail" src="{{Url}}" alt="">
+            </div>
+            <div class="col-md-12">
+                <div class="col-md-12">
+                    <mat-form-field appearance="legacy" class="d-block">
+                        <mat-label>Name</mat-label>
+                        <input matInput formControlName="name">
+                    </mat-form-field>
+                </div>
+                <div class="col-md-12">
+                    <mat-form-field appearance="legacy" class="d-block">
+                        <mat-label>Count</mat-label>
+                        <input matInput formControlName="count">
+                    </mat-form-field>
+                </div>
+                <div class="col-md-12">
+                    <mat-form-field appearance="legacy" class="d-block">
+                        <mat-label>ShortDescription</mat-label>
+                        <input matInput formControlName="shortDes">
+                    </mat-form-field>
+                </div>
+                <div class="col-md-12">
+                    <mat-form-field appearance="legacy" class="d-block">
+                        <mat-label>Description</mat-label>
+                        <textarea matInput formControlName="description"></textarea>
+                    </mat-form-field>
+                </div>
+                <div class="col-md-12">
+                    <div class="col-md-12 p-0 mt-3 mb-3">
+                        <input type="file" accept="image/*" #image (change)="onSelectFile($event)" />
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <button mat-raised-button color="primary" class="w-100" type="submit" (click)="EditProduct()">Edit Product</button>
+                </div>
+            </div>
+        </form>
+
+    </mat-card>
+
+</div>
